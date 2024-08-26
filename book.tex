@@ -1,0 +1,131 @@
+%%%%%%%%%%%%%%%%%%%% book.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% sample root file for the chapters of your "monograph"
+%
+% Use this file as a template for your own input.
+%
+%%%%%%%%%%%%%%%% Springer-Verlag %%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% RECOMMENDED %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[graybox,envcountchap,sectrefs]{svmono}
+
+% choose options for [] as required from the list
+% in the Reference Guide
+
+%\usepackage{mathptmx}
+%\usepackage{helvet}
+%\usepackage{courier}
+%
+
+% IMAGES
+
+\usepackage{quiver}
+
+\usepackage{type1cm}         
+
+\usepackage{makeidx}         % allows index generation
+\usepackage{graphicx}        % standard LaTeX graphics tool
+                             % when including figure files
+\usepackage{multicol}        % used for the two-column index
+\usepackage[bottom]{footmisc}% places footnotes at page bottom
+
+\usepackage{newtxtext}       % 
+\usepackage{newtxmath}       % selects Times Roman as basic font
+
+\usepackage{tikz-cd}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\DeclareFontFamily{U}{mathx}{}
+\DeclareFontShape{U}{mathx}{m}{n}{<-> mathx10}{}
+\DeclareSymbolFont{mathx}{U}{mathx}{m}{n}
+\DeclareMathAccent{\widehat}{0}{mathx}{"70}
+\DeclareMathAccent{\widecheck}{0}{mathx}{"71}
+
+\setcounter{tocdepth}{1}     % only include sections, not subsections
+
+\usepackage{hyperref}   % for clickable links
+\usepackage{bookmark}   % for improved bookmark organization
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,     % color of internal links
+    citecolor=black,     % color of links to bibliography
+    urlcolor=black       % color of external links
+}
+
+\usepackage{caption}
+
+\usepackage{ dsfont }
+
+\captionsetup[table]{justification=centering} % Center table captions
+
+% see the list of further useful packages
+% in the Reference Guide
+
+\makeindex             % used for the subject index
+                       % please use the style svind.ist with
+                       % your makeindex program
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5\baselineskip}
+
+\graphicspath{{./}{images/}}
+
+\begin{document}
+
+\author{Rutgers University}
+\title{Symplectic Summer School 2024}
+\subtitle{}
+
+\maketitle
+
+\frontmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{author/acknowledgement}
+
+\tableofcontents
+
+\mainmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{author/bao/part}
+\include{author/bao/1}
+\include{author/bao/2}
+\include{author/bao/3}
+
+\include{author/usher/part}
+\include{author/usher/1}
+\include{author/usher/2}
+\include{author/usher/3}
+
+\include{author/swaminathan/part}
+\include{author/swaminathan/1}
+\include{author/swaminathan/2}
+\include{author/swaminathan/3}
+
+\include{author/talks/part}
+
+\include{author/talks/pieloch}
+\include{author/talks/cristofaro}
+\include{author/talks/pomerleano}
+\include{author/talks/wang}
+\include{author/talks/hendricks}
+
+\include{author/talks/pardon}
+\include{author/talks/mclean}
+\include{author/talks/prasad}
+\include{author/talks/massoni}
+\include{author/talks/oganesyan}
+
+
+\backmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
+
+
+
+
+

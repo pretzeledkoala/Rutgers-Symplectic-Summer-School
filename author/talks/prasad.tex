@@ -1,0 +1,172 @@
+\chapter{Rohil Prasad: High-Dimensional Families of Holomorphic Curves and Three-Dimensional Energy Surfaces}
+\label{prasad}
+
+\abstract{Let $H$ be any smooth function on $\mathbb{R}^4$. I’ll discuss some recent dynamical theorems for the Hamiltonian flow on level sets of H (“energy surfaces”). The results are proved using holomorphic curves and neck stretching. One important tool is the compactness theorem from Dan’s talk.}
+
+\section{Basics}
+
+Consider $(\mathbb{R}^n, \Omega = \sum_{i=1}^n \,dx_i \wedge \,dy_i)$, a Hamiltonian $H:\mathbb{R}^{2n} \to \mathbb{R}$, and the Hamiltonian vector field $X_H$.
+
+\begin{lemma}
+
+The flow of $X_H$ preserves $H$.
+
+\end{lemma}
+
+\begin{corollary}
+
+The flow of $X_H$ preserves the level sets of $H$.
+
+\end{corollary}
+
+\begin{remark}
+
+Historically, these $H$'s were called energy surfaces.
+
+\end{remark}
+
+\begin{definition}
+
+Fix $s\in \text{Reg}(H)$. Then $ H^{-1}(s)$ is a smooth $(2n-1)$-dimensional manifold. Energy surfaces that arise this way are called \textbf{regular}.
+
+\end{definition}
+
+\section{Invariant Sets}
+
+\begin{problem}
+[Herman, 1998 ICM]
+
+Fix $H:\mathbb{R}^{2n}\to \mathbb{R}$ and fix a compact regular energy surface. Does $Y$ contain a proper closed $X_H$ invariant subset?
+
+\end{problem}
+
+\begin{theorem}
+[Fish, Hofer, 2018]
+
+Yes for $n=2$.
+
+\end{theorem}
+
+Here is some more progress on the problem:
+
+\begin{theorem}
+[Weinstein, Rabinowitz, Vileda]
+
+If $Y$ is of contact type, it contains a closed orbit.
+
+\end{theorem}
+
+\begin{theorem}
+    Examples exist where $Y$ has no closed orbits:
+        \begin{itemize}
+            \item \text{[Ginzburg, Kerman, Herman]} for $n \geq 3$.
+            \item \text{[Ginzburg, Gurel]} for $n \geq 2$, with $H$ being $C^2$.
+        \end{itemize}
+\end{theorem}
+
+\begin{theorem}
+[Prasad, 2024; Theorem A]
+
+Let $H: \mathbb{R}^{n} \to \mathbb{R}$, $Y$ be a compact regular energy surface. There exists an infinite family of distinct, proper, closed invariant subsets with dense union in $Y$.
+
+\end{theorem}
+
+Notation: $\text{Reg}_C(J)=\{ s\in \text{Reg}(H)| H^{-1}(s)\text{ compact} \}$.
+
+\begin{theorem}
+[Theorem B]
+
+Let $H': \mathbb{R}^{2n} \to \mathbb{R}$ for almost every $s\in \text{Reg}_c(H)$. $H'(s)$ has the following property: for any closed orbit $\Lambda \subset H^{-1}(s)$, $H^{-1}(s)/\Lambda$ is not minimal.
+
+\end{theorem}
+
+\begin{remark}
+
+The Le Calvez-Yoccoz property implies dense existence on invariant sets.
+
+\end{remark}
+
+\section{Closed Orbits and Closed Holomorphic Curves}
+
+\begin{theorem}
+[Hofer, Zehnder, 1987]
+
+Fix $H:\mathbb{R}^{2n} \to \mathbb{R}$. For about every energy surface $s\in \text{Reg}_c(H), H^{-1}(c)$ contains a closed orbit.
+
+\end{theorem}
+
+\begin{theorem}
+
+Fix $H:\mathbb{R}^{2n} \to \mathbb{R}$. Almost every $s\in \text{Reg}_c H$, $H^{-1}(s)$ contains two closed orbits. This bound is sharp.
+
+\end{theorem}
+
+\begin{proof}
+Consider
+\[
+H=\dfrac{x_1^2+y_1^2}{a}+\dfrac{x_2^2+y_2^2}{b}
+\]
+where $\frac{a}{b}\notin \mathbb{Q}$. Each regular energy surface has 2 closed orbits.
+\end{proof}
+
+\begin{theorem}
+
+Fix $H:\mathbb{R}^4\to \mathbb{R}$. Under $C^\infty$-generic conditions on $H$, almost every compact regular energy surface has infinitely many closed orbits.
+
+\end{theorem}
+
+\begin{proof}
+Follows from a strictly stronger version of Theorem B and known results about generic Hamiltonians.
+\end{proof}
+
+\begin{theorem}
+[Taubes]
+
+Fix $H: \mathbb{CP}^2 \to \mathbb{R}$. Fix base $J, J\ge 1, S\subset \mathbb{CP}^2$ such that $\# S \approx \lambda^2$. Then there exists a closed $J$-holomorphic curve $u: C\to \mathbb{CP}^2$ such that
+\begin{enumerate}
+\item $S=u(C)$
+\item $\int_C u\Omega = d$
+\item $\chi(C)\sim -d^2$
+\end{enumerate}
+
+\end{theorem}
+
+\section{Theorem A Proof Idea}
+
+Take
+\[
+W_k=\mathbb{CP}^2 \backslash Y \cup [-k,k]\times Y.
+\]
+
+Consider the sequence $u_k: C_k \to W_k$.
+
+\begin{definition}
+
+The \textbf{stretched limit set}
+\[
+\chi(u_k)\in \text{Cl}((-1,1)\times Y)\times (-1,1).
+\]
+
+We say $(\Xi, s)\in \chi(u_k)$ if there exists $\{s_k\}$ such that the following holds:
+
+\begin{enumerate}
+\item $u_k(C_k) \cap (s_k^{-1}, s_k +1) \times Y \to \Xi$ after shifting
+\item $k^{-1}s_k \to s$.
+\end{enumerate}
+
+\end{definition}
+
+Define $u_{d,k}$ be the set of degree $d$ curves as above. The main structural result is the following:
+
+\begin{proposition}
+\text{ }
+\begin{enumerate}
+\item For almost every $s$ and every $(\Xi, s) \in \chi(s_k)$,
+    \[
+    \Xi = (-1,1)\times \Lambda
+    \]
+    where $\Lambda$ is $X_H$ invariant.
+\item For all but $\sim d^2$ heights $s$, every $(\Xi, s) \in \chi(u_{d,k})$ is such that $\Xi$ is $\epsilon$-almost invariant where $\epsilon\to 0$ as $d\to \infty$.
+\end{enumerate}
+
+\end{proposition}

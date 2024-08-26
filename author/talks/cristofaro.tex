@@ -1,0 +1,193 @@
+\chapter{Dan Cristofaro-Gardiner: Low-Action Holomorphic Curves and Invariant Sets}
+\label{cristofaro}
+
+\abstract{I will discuss a new compactness theorem for sequences of low-action punctured holomorphic curves of controlled topology, in any dimension, without imposing the typical assumption of uniformly bounded Hofer energy; in the limit, we extract a family of closed Reeb-invariant subsets. I will also explain why such sequences exist in abundance in low-dimensional symplectic dynamics, via the theory of embedded contact homology. This has various applications: the one I want to focus on in my talk is a generalization to higher genus surfaces and three-manifolds of the celebrated Le Calvez–Yoccoz theorem. All of this is joint with Rohil Prasad.}
+
+\section{Introduction}
+
+\subsection{A New Compactness Theorem }
+
+Consider a closed oriented $2n+1$ manifold $Y$. We are interested in framed Hamiltonian structures:
+
+\begin{definition}
+
+A \textbf{framed Hamiltonian structure} is a pair $(\lambda,\omega)$ where $\lambda$ is a 1-form, $\omega$ is a closed 2-form, and $\lambda \wedge \omega^n > 0$.
+
+\end{definition}
+
+\begin{example}
+\text{ }
+\begin{itemize}
+\item Let $\lambda$ be a contact form, $\omega =\,d\lambda$. The mapping torus is a symplectic automorphism $\phi: (M^{2n}, \omega) \to (M^{2n}, \omega)$. We have
+    \[
+    Y=M^{2n}\times [0,1]/\sim
+    \]
+    where $(x,1) \sim (\phi(x), 0)$. The pair $(dt, \omega)$ is a framed Hamiltonian structure.
+\item Suppose we have a proper Hamiltonian $H:(M^{2n}, \omega) \to R$. Suppose we have a regular value $c$. Then $H^{-1}(c)$ is a framed Hamiltonian structure.
+\item Non-singular volume preserving flows on a closed 3-manifold are framed Hamiltonian structures.
+\end{itemize}
+
+\end{example}
+
+Let $(\lambda, \omega)$ is a Hamiltonian vector field. Suppose we have $R$ satisfying $\omega(R, \cdot)=0, \lambda(R)=1$.
+
+\begin{example}
+
+In the contact case, $R$ is the Reeb vector field.
+
+\end{example}
+
+We want non-trivial (nonempty and proper) closed invariant sets of $R$.
+
+\begin{example}
+\text{ }
+\begin{itemize}
+\item A periodic orbit
+\item The invariant tori
+\item Orbit closure for $f$ proper
+\end{itemize}
+
+\end{example}
+
+Consider the symplectization $X=\mathbb{R}\times Y$ with an almost complex structure: $J: TX\to TX, J^2=-1, J(\partial_S)=R$ that preserves $\text{ker}(\lambda)$ compatibly with $\omega$. We are interested in sequences of holomorphic curves
+\[
+u_k: C_k \to \mathbb{R}\times Y
+\]
+where $u_k$ is proper and $J$-holomorphic, $C_k$ is a closed Riemann surface minus a finite number of punctures. For $u_k$, define the limit set
+\[
+L(u_k) = \{ \overline{K}\subset (-1, 1)\times Y | \text{condition}\}
+\]
+where the condition is that $\overline{k}$ is closed and there exists a subsequence $u_k(C_k) \cap (s_k-1, s_k+1)\times Y$ converging (after shifting) to $k$. We should think of this as subsequential limits of height 2 slices.
+
+\begin{proposition}
+
+$L(u_*)$ is a connected.
+
+\end{proposition}
+
+We have the following classical quantities associated to $u$:
+\begin{itemize}
+\item The action
+    \[
+    \mathcal{A}(u) = \int_C u^* \omega
+    \]
+\item The Hofer energy
+    \[
+    \mathcal{E}(u)=\sup_{s\in \mathbb{R}} \int_{C\cap u^{-1}(\{s\}\times Y)} u^*\lambda
+    \]
+\end{itemize}
+
+\begin{theorem}
+
+Let $u_k: C_k \to R\times Y$ be such that $\lim_{k\to \infty} \mathcal{A}(u_k)=0$ and $\inf_k x(C_k)>-\infty$. Then every $k\in L(u_*)$ satisfies $k=(-1,1) \times \Lambda$ for some closed non-empty invariant set $\Lambda$.
+
+\end{theorem}
+
+The upshot is that the sequence as in the theorem gives a connected family of invariant sets.
+
+\begin{remark}
+
+The main novelty is that there is no bound required on the Hofer energy $\mathcal{E}(u_k)$.
+
+\end{remark}
+
+\section{Dynamical Applications}
+
+The upshot is that the theorem widely applicable in low dimensions. In higher dimensions, problems are more open. In particular, they are very important in relation to the Le Calvez-Yoccoz Theorems
+
+\begin{definition}
+[Birkhoff]
+
+A dynamical system $Y$ is \textbf{minimal} if every orbit is dense.
+
+\end{definition}
+
+One motivation is that if $Y$ is not minimal, we can write $Y=k \cap (Y-k)$ where $k$ is a non-trivial invariant set.
+
+\begin{problem}
+[Ulam]
+
+Is there a minimal homeomorphism of $\mathbb{R}^n$ or $\mathbb{R}^n - \{p\}$?
+
+\end{problem}
+
+\begin{theorem}
+[Le Calvez, Yocroz, 1997]
+
+A homeomorphism of $S^2-\{p_1,...,p_k\}$ is never minimal.
+
+\end{theorem}
+
+\begin{definition}
+
+A system has the \textbf{(strong) Le Calvez-Yoccoz property} if the complement of any nontrivial invariant set is never minimal.
+
+\end{definition}
+
+\begin{theorem}
+[Cristofaro-Gardiner, Prasad]
+
+The following have the strong Le Calvez-Yoccoz property:
+
+\begin{enumerate}
+\item Any Hamiltonian diffeomorphism of a closed surface
+\item Any Reeb flow on a rational homology sphere
+\item Any geodesic flow on a closed surface (considered as a flow of its unit tangent bundle)
+\end{enumerate}
+
+\end{theorem}
+
+\begin{remark}
+
+There is no genericity required.
+
+\end{remark}
+
+\begin{corollary}
+
+$(1)-(3)$ have the property that the non-trivial invariant sets are dense
+
+\end{corollary}
+
+\begin{corollary}
+
+Any geodesic flow on a surface has the property that a dense set of points have $n$ non-dense geodesic passing through them.
+
+\end{corollary}
+
+\section{Proof Ideas}
+
+\subsection{Finding Low Action Curves of Controlled Topology}
+
+This part of the proof uses the embedded contact homology $\text{ECH}$. For $(Y, \lambda)$ a closed 3-manifold, $\text{ECH}(Y,\lambda)$ is a homology of a cochain complex that counts (mostly) embedded curves.
+
+\begin{theorem}
+
+\[
+\text{ECH}(X, \lambda) \cong \text{HM}(Y)
+\]
+
+\end{theorem}
+
+There exists a map $u: \text{ECH}\to \text{ECH}$ bounding curves through a marked point and the Weyl law allows us to use the $u$-map to produce low action curves
+
+\begin{problem}
+
+How do we bound $X_\pi(C_k)?$
+
+\end{problem}
+
+There is no bound a priori on the genus.
+
+\begin{theorem}
+[Cristofaro, Gardiner, Prasad]
+
+\[
+x_k(C_k)\ge -2.
+\]
+
+\end{theorem}
+
+\subsection{Proving the Compactness Theorem}
+
+The main point is a new estimate that bounds of $C$ in a small ball if $C$ is low action in terms of $\chi(C)$.

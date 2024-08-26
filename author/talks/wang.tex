@@ -1,0 +1,167 @@
+\chapter{Luya Wang: Deformation Inequivalent Symplectic Structures and Donaldson's Four-Six Question}
+\label{wang}
+
+\abstract{Studying symplectic structures up to deformation equivalences is a fundamental question in symplectic geometry. Donaldson asked: given two homeomorphic closed symplectic four-manifolds, are they diffeomorphic if and only if their stabilized symplectic six-manifolds, obtained by taking products with $\mathbb{CP}^1$ with the standard symplectic form, are deformation equivalent? I will discuss joint work with Amanda Hirschi on showing how deformation inequivalent symplectic forms remain deformation inequivalent when stabilized, under certain algebraic conditions. This gives the first counterexamples to one direction of Donaldson’s “four-six” question and the related Stabilizing Conjecture by Ruan. In the other direction, I will also discuss more supporting evidence via Gromov–Witten invariants.}
+
+\section{Introduction}
+
+\begin{definition}
+
+$(X_1, \omega_1)$ and $(X_2, \omega_2)$ are \textbf{deformation equivalent} if there exists a diffeomorphism $\varphi: X_1\to X_2$ such that $\varphi^* \omega_2 \rightsquigarrow \omega_1$.
+
+\end{definition}
+
+\begin{problem}
+[Donaldson]
+
+Given two closed simply-connected homeomorphic $(X_1^4, \omega_1)$ and $(X_2^4, \omega_2)$. Is $X_1$ diffeomorphic to $X_2$ equivalent to
+\[
+(X_1\times S^2 \omega_1 \oplus \omega_{\text{std}}) \simeq (X_s \times S^2, \omega_2 \oplus \omega_{\text{std}})?
+\]
+
+\end{problem}
+
+\begin{theorem}
+[Wall, 1964]
+
+Two closed simply-connected homeomorphic 4-manifold are $h$-cobordant.
+
+\end{theorem}
+
+\begin{theorem}
+[Smale, 1962]
+
+Let $n\ge 5$. Then two closed simply connected $n$-manifolds are $h$-cobordant implies they are diffeomorphic.
+
+\end{theorem}
+
+Some history:
+\begin{itemize}
+\item \text{[Ruan, 1994]}: Homeomorphic but not diffeomorphic Kähler surfaces $\mathbb{C}^2 \# \overline{\mathbb{CP}}^2$ and Barlow surface.
+\item \text{[Ruan, Tian, 1997]}: Stabilizing conjecture. For simply connected elliptic surfaces.
+\item \text{[Ionel, Parker, 1999]}: $E(n)$ using knot surgery.
+\item \text{[Smith, 2000]}: Given $n\ge 2$. Constructs $n$ symplecitc structures on a fixed simply-connected $Z^4$ such that $c,s$ are different, which implies the 4-6 question cannot be replaced by $\pi^2$.
+\end{itemize}
+
+\begin{theorem}
+\label{thm1}
+[Hirschi, Wang, 2023]
+
+There exists infinitely many pairs $(X_1, \omega_1), (X_2, \omega_2)$ such that $X_1, X_2$ are diffeomorphic, but
+\[
+(X_1 \times S^2, \omega_1 \oplus \omega_{\text{std}}) \not\simeq (X_2 \times S^2, \omega_2 \oplus \omega_{\text{std}}).
+\]
+
+\end{theorem}
+
+Here is another important theorem, which we will prove in the last section:
+
+\begin{theorem}
+\label{thm2}
+[Hirschi, Wang, 2023]
+
+Let $(X_1, \omega_1)$ and $(X_2, \omega_2)$ be closed simply-connected 4-manifolds such that
+\[
+(X_1 \times S^2, \omega_1 \oplus \omega_{\text{std}}) \simeq (X_2 \times S^2, \omega_2 \oplus \omega_{\text{std}}).
+\]
+
+Then $\text{GW}(X_1)=\text{GW}(X_2)$.
+
+\end{theorem}
+
+\begin{corollary}
+
+If $(X_1, \omega_1)$ and $(X_2, \omega_2)$ satisfy hypothesis of Theorem \ref{thm2}, and $b_2^+ \ge 2$, then $\text{SW}(X_1)=\text{SW}(X_2)$.
+
+\end{corollary}
+
+The invariant is orbits under diffeomorphisms of $c_1$: given symplectic form $\omega$, we can take a tame $J$ and it's first chern class $c_1(TX,J)$. The goal is to show that $c_1(X\times S^2, \omega_1 \oplus \text{std})$.
+
+\begin{definition}
+
+Given $X,Y$ let $G_{X,Y}$ be the set of cohomology equivalences $\psi$ of $X\times Y$ such that $\psi^*$ are maps $H^2(X; \mathbb{Z})\to H^2(X; \mathbb{Z})$ and $\text{pr}_G\psi(\cdot, Y)$ is cohomology equivalent.
+
+\end{definition}
+
+\section{Proof 1}
+
+Here are the steps toward a proof of Theorem \ref{thm1}:
+
+\begin{enumerate}
+\item Find a smooth manifold $X^4$ with symplectic forms $\omega_1$ and $\omega_2$ such that $c_1(\omega_1)$ and $c_1(\omega_2)$ lie in different orbits of cohomology equivalences.
+\item Show that if $c_1(\omega_1)$ and $c_2(\omega_2)$ lie in different orbits of cohomology equivalence, then $c_1(\omega_1 \oplus \omega_{\text{std}})$ and $c_1(\omega_2 \oplus \omega_{\text{std}})$ lie in different orbits of $G_{X, S^2}$.
+\item Show that any diffeomorphism of $X\times S^2$ lies in $G_{X,S^2}$.
+\end{enumerate}
+
+Let's prove $(2)$:
+
+\begin{proof}
+Suppose there exists $\psi \in G_{X,S^2}$ such that $\psi^* c_1(\omega_2 \oplus \omega_{\text{std}})=c_1(\omega_1 \oplus \omega_{\text{std}})$. Then $\psi^* h = h+\alpha$, where $\alpha \in H^2(x)$. Also, $\psi^*(h^2)=0$ implies that $(h+\alpha)^2 = h^2 + 2\alpha h + \alpha^2 =0$, which implies $2a=0$ in $H^*(X\times \mathbb{CP}^1)\cong H^*(x)[h]/h^2$. Now we get
+\begin{align*}
+c_1(\omega_1) + 2h &= \psi^* c_1(\omega_2) + 2\psi^* h \\
+&= \psi^* c_1(\omega_2)+2h+2\alpha
+\end{align*}
+
+as desired.
+\end{proof}
+
+\begin{proposition}
+
+$\hat{\psi}$ is a cohomology equivalence on $X$.
+
+\end{proposition}
+
+Now, we present a counter example for $(1)$ and $(3)$
+Let $Z:= \mathbb{T}^4\# 5E(1)$ where $\#$ is the fiber sum. Then we have $\langle x,t \rangle = T_X, T_Y, T_Z, 2T_W$ where $[T_W] = [T_x+T_y+T_Z]$. Then we have $T_X, 2T_W$ are symplectic and $T_Y, T_Z$ are Lagrangian.
+
+\begin{theorem}
+[Smith]
+
+$\xi \mid c_1(TZ, \omega)$ and $c_1(TZ, \omega)$ is prime.
+
+\end{theorem}
+
+\section{Proof 2}
+
+We prove Theorem \ref{thm2}.
+
+Consider $(X_0, \omega_0)$ and $(X_1, \omega_1)$ simply connected. Suppose
+\[
+(X_0\times S^2, \omega_0 \oplus \omega_{\text{std}})\simeq (X_1\times S^2, \omega \oplus \omega_{\text{std}}).
+\]
+Then there exists a homeomorphism $\varphi: X_0\to X_1$ such that for all $g,n \ge 0$ and $A\in H_2(X_0)$, we have
+\[
+\text{GW}_{g,n,A}^{X_0, \omega_0}(\varphi^* \alpha_1, ..., \varphi^* \alpha_n)= \text{GW}_{g,n,\varphi^* A}^{X_0, \omega_0}(\alpha_1, ..., \alpha_n)
+\]
+for any $\alpha \in H^*(X; \mathbb{Q})$.
+
+\begin{theorem}
+[Hirschi-Swaminathan Product Formula]
+
+For $(X_0, \omega_0)$ and $(X_1, \omega_1)$ with torsion free $H_1(X; \mathbb{Z})$, we have
+\[
+\text{GW}_{g,n,(B_X, B_Y)}^{X\times Y, \omega_X \oplus \omega_Y}(\alpha_1\times \beta_1,...,\alpha_n \times \beta_n) = \text{GW}_{g,n,B_X}^{X, \omega}(\alpha_1,...,\alpha_n)\text{GW}_{g,n B_Y}^{Y, \omega Y}(\beta_1,...,\beta_n)
+\]
+in $H^*(\overline{\mathcal{M}}_{g.n}; \mathbb{Q})$.
+
+\end{theorem}
+
+\begin{problem}
+    How do we find some $\beta_1,...,\beta_n$ in $H^*\left(\overline{M}_{g,n}; \mathbb{Q}\right)$ and $d$ such that 
+\[ \text{GW}^{S^2}_{g,n,d}\left(1^{\otimes n}\right)\left([\text{pt}]\right) \neq 0\]
+\end{problem}
+
+\begin{lemma}
+
+This is possible for $g$ odd:
+\[ \text{GW}^{S^2}_{g,n,d}\left(1^{\otimes n}\right)\left([\text{pt}]\right) =2^g \]
+
+\end{lemma}
+
+We need one last lemma:
+
+\begin{lemma}
+    Suppose $X_0, X_1$ have nonvanishing signature. Then we can find a homeomorphism $\phi: X_0 \to X_1$ such that $\tilde{\phi}^*$ on $X_1\times S^2 \to X_0 \times S^2$ agree with $\phi^* \otimes \text{id}$.
+\end{lemma}
+
+Suppose $\sigma(X_0)=0$. The simply-connected condition implies that $X_0$ is homeomorphic to the number of odd $(S^2\times S^2)$, or the number of odd $\left(\mathbb{CP}^2 \#\overline{\mathbb{CP}}^2\right)$. This concludes the proof.

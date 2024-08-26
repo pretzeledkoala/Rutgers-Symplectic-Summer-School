@@ -1,0 +1,209 @@
+\chapter{Alex Pieloch: Spectral Equivalence of Nearby Lagrangians}
+\label{pieloch}
+    
+\abstract{Fix a commutative ring spectrum $R$. In this talk, we will show that any nearby Lagrangian in a cotangent bundle of a closed manifold is equivalent in the wrapped Fukaya category with $R$-coefficients to an $R$-brane supported on the zero section. As an application, we impose topological restrictions on the embeddings of exact Lagrangian fillings of the standard Legendrian unknot in sub-critical Stein domains. This is joint work with Johan Asplund and Yash Deshmukh.}
+
+\section{Introduction}
+\begin{theorem}
+[Abouzaid]
+
+Let $L\subset T^* Q$ be exact, equipped with a choice of rank 1 local system $L$ equivalent in the wrapped Fukaya category $\mathcal{W}(T^* Q, \mathbb{Z})$ to the zero section, with some choice of rank 1 local system.
+
+\end{theorem}
+
+Let $R$ be a commutative ring spectrum. A spectrum is morally something that functions like a space. It's a bit more complicated, but this complication allows us to do more algebraic operations. There spectrum also allow us to define more homology theories. And each one of these, can be realized using the language of spectrum. For example:
+
+\begin{example}
+
+Take
+\[
+\pi_*(M\wedge R) = H_*(M, \mathbb{R}).
+\]
+If we let $R=HK$, then we have $H_*(M;K)$. If we let $R=\text{MO}$, then we get $\Omega_*^{\text{MO}}(M)$
+
+\end{example}
+
+\begin{theorem}
+
+Let $L\subset T^*Q$ be a nearby Lagrangian with an $R$-brane. In $\mathcal{W}(T^*Q, \mathbb{R})$, $L$ is equivalent to an $R$-brane on the zero section.
+
+\end{theorem}
+
+Here is one application of this theorem. We will prove this application later.
+
+\begin{theorem}
+
+Let $X$ be a subcritical Weinstein domain with $c_1(X)=0=c_2(X)$. Let $\Lambda \subseteq \partial X$ be a Legendrian unknot, with standard filling $C$. Fix a Lagrangian $L\subseteq X$ that is an exact filling of $\Lambda$. Then $L$ is homotopic to $C$ with $\Lambda$ fixed in $X/X_{n-2} = \bigvee S^{n-1}$.
+
+\end{theorem}
+
+\begin{definition}
+\text{ }
+\begin{enumerate}
+\item $\mathcal{W}(X, \mathbb{Q})$ is a category where the objects are the exact canonical Maslov Lagrangians with rank 1 local systems and the morphisms are chain complexes built from $M(\between)$.
+\item $\mathcal{W}(X, \mathbb{R})$ is a category where the objects are the exact canonical Maslov Lagrangians with rank 1 local systems R-branes and the morphisms are $R$-module spectra built from $M(\between)$.
+\end{enumerate}
+
+\end{definition}
+
+\begin{definition}
+
+A vector bundle $\mathcal{E}\to \mathcal{B}$ is \textbf{$R$-orientable} if
+\[
+\mathcal{B}\stackrel{\mathcal{E}}{\longrightarrow} \text{BO} \longrightarrow \text{BGL}()\longrightarrow \text{BGL}(\mathbb{R}).
+\]
+is null.
+
+\end{definition}
+
+\begin{example}
+
+Let $\mathbb{R}= H \mathbb{Z}$. Then
+\[
+\mathcal{B} \to \text{BO} \to \text{BGL}(H \mathbb{Z}) = B\text{Aut}(\mathbb{Z})=B\mathbb{Z}/2.
+\]
+
+\end{example}
+
+\section{$R$-Branes and Properties}
+
+Assume that $X$ be a symplectically trivializable space, meaning $TX=\mathbb{C}\otimes \mathbb{R}^n$. Given $L\subset X$ a Lagrangian, denote $\text{GL} : L\to \mathcal{U}/O$ as the Lagrangian Grassmannian.
+
+\begin{definition}
+
+An \textbf{$R$-brane} is a choice of null-homotopy of
+\[
+L\stackrel{\text{GL}}{\longrightarrow} \mathcal{U}/O \stackrel{\text{Bott}}{\longrightarrow} B^2(0) \longrightarrow B^2 \text{GL}_1(R).
+\]
+
+\end{definition}
+
+\begin{remark}
+\text{ }
+\begin{enumerate}
+\item $R$-branes correspond to $[L, B \text{GL}_1(R)]$ which are rank 1 local systems.
+\item $R=H\mathbb{Z}, [L, B\text{GL}_1(H\mathbb{Z})] = [L, B\mathbb{Z}/2 ]$ are rank 1 local systems.
+\item Let $M_L=\{(D, \partial D) \to (X,L)| \overline{\partial} u=0, \text{ based} \}$. We want
+\[\begin{tikzcd}
+	{\mathcal{M}_L} & {\text{BO}} & {\text{BGL}_1(R)} \\
+	{\Omega_L} & {\text{BGL}_1(R)}
+	\arrow["{\text{T}\mathcal{M}_L}", from=1-1, to=1-2]
+	\arrow[from=1-1, to=2-1]
+	\arrow[from=1-2, to=1-3]
+	\arrow["{*}"', curve={height=30pt}, from=2-1, to=1-3]
+	\arrow["{\Omega \text{GL}}", from=2-1, to=2-2]
+	\arrow["{\text{Bott}}", from=2-2, to=1-2]
+\end{tikzcd}\]
+where the left square commutes.
+\end{enumerate}
+
+\end{remark}
+
+\begin{proposition}
+\text{ }
+\begin{enumerate}
+\item We have
+\[
+\text{Mor}(L, L)=\text{HW}(L, L, \mathbb{R})= L \wedge R
+\]
+\item For $L$ compact, we have
+\[
+\pi_*(\text{HW}(L, K, R)) \in \text{Ab} \\
+\pi_*(\text{HW}(L, L, R)) = H_*(L, R)
+\]
+\item Change of coefficients: consider $S$ a module over $R$. Then we have
+    \[
+    \mathcal{W}(X, S) = \mathcal{W}(X,R) \wedge_R S
+    \]
+\end{enumerate}
+
+\end{proposition}
+
+From now on, assume that $R$ is connective, $\pi_0(R)=K$ is discrete, and the Hurwitz map $\text{Hw}: R\to \text{HK}$ is $\mathds{1}$ on $\pi_0$.
+
+\begin{proposition}
+\text{ }
+Let $M, M'$ be connected $R$-module spectra.
+\begin{enumerate}
+\item Let
+    \[\pi_*(M\wedge_R \text{HK}) = \begin{cases} K & *=0 \\ 0 & \text{else} \end{cases}
+    \]
+    Then $M=R$.
+\item If
+\[\begin{tikzcd}
+	M &&& {M'} \\
+	\\
+	{M\wedge_R \text{HK}} &&& {M'\wedge_R \text{HK}}
+	\arrow["f", from=1-1, to=1-4]
+	\arrow["{\text{H}_W}"', from=1-1, to=3-1]
+	\arrow["{\text{H}_W}", from=1-4, to=3-4]
+	\arrow["{H_n(f)}"', from=3-1, to=3-4]
+\end{tikzcd}\]
+    then $\text{Hw}(f)$ are equivalent implies $f$ is equivalent.
+\end{enumerate}
+
+\end{proposition}
+
+\begin{proof}
+\text{ }
+We have $\text{HW}(\text{Fib}=F, F, R)=\Omega Q \wedge R$ and $\text{HW}(F,L, R) =R$. The following commutative diagram 
+    \[\begin{tikzcd}
+        {\text{HW}(F, F)\wedge_R \text{HW}(F, L)} && {\text{HW}(F,L)} \\
+        \\
+        {\Omega Q \wedge R} && R
+        \arrow["{\mu^2}", from=1-1, to=1-3]
+        \arrow[from=1-1, to=3-1]
+        \arrow[from=1-3, to=3-3]
+        \arrow[from=3-1, to=3-3]
+    \end{tikzcd}\]
+implies that $\text{Hw}(F,L) \leftrightarrow Q \to \text{BGL}_1(R) \leftrightarrow $ rank 1 local system on $Q$. Every such local system is realized by $\text{HW}(G, Q^\#)$ where $Q^{\#}$ is some $R$-brane. We have
+\[\begin{tikzcd}
+	{\text{HW}(L, Q^\#)} & {} && {F_{\Omega Q \wedge R}(R, R)} \\
+	\\
+	{\text{HW}(L, Q)\wedge_R \text{HK}} \\
+	{\text{HW}(L,Q,K)} & {} && {F_{\Omega Q \wedge HK}(\text{HK}, \text{HK})}
+	\arrow["\cong", from=1-1, to=1-4]
+	\arrow["{{{\text{H}_W}}}"', from=1-1, to=3-1]
+	\arrow["{{{\text{H}_W}}}", from=1-4, to=4-4]
+	\arrow["{{{=}}}"{description}, draw=none, from=3-1, to=4-1]
+	\arrow["\cong"', from=4-1, to=4-4]
+	\arrow[shift right=5, Rightarrow, from=4-2, to=1-2]
+\end{tikzcd}\]
+
+which concludes the proof.
+\end{proof}
+
+\section{Proof}
+
+Let's prove the application of the theorem from earlier. Recall that $X$ is a subcritical Weinstein domain if $c_1(X)=0=a(X)$, $\dim_{\mathbb{C}}X\ge 4$, $\Lambda \subset \partial X$ the unknown with standard filling $C$, and $L\subset X$ is an exact filling of $L$ (where $L=\mathbb{D}^n$).
+
+\begin{proposition}
+
+It suffices to show that $[L \cup_\Lambda C] =0 \in \tilde{\Omega}^{\text{spin}}_n (X) = \tilde{H}_X(X, \mathcal{M}\text{Spin})$
+
+\end{proposition}
+
+\begin{proof}
+It suffices to show that $L\cup_\Lambda C \cong S^n \implies X/X_{n-?} \simeq V$ where $S^{n-1}$ is based null. We have 
+\[\mathbb{Z}/2 \cong \pi_n(S^{n-1}) \to \tilde{\Omega}_n^{\text{spin}} (S^{n-1}) \stackrel{\cong}{\longrightarrow} \Omega_1^{\text{spin}}(\text{pt})\subset \Omega_1^{\text{spin}} \mathbb{Z}/2\]
+which is an isomorphism by Pontryagin-Thorn. If $X/X_{n-2} \simeq S^{n-1}$, then the claim holds. If $X/X_{n-2} = \vee S^{n-2}$, then the claim holds by the Milnor-Hilton argument.
+\end{proof}
+
+Let $\hat{X}=X\cup_\Lambda H^n, \hat{L}=L$, and $\hat{C}= C \subset U_n$ be the the core of $H^n$.
+
+\begin{proposition}
+
+\[[\hat{L}]=[\hat{C}]\in \tilde{\Omega}^{\text{spin}}(\hat{X}).\]
+
+\end{proposition}
+
+\begin{proof}
+Take $f:\hat{X}\to X$ such that $\hat{f}(\hat{L}) = [L\cup_\Lambda C]$. We have $0=f(\hat{C})\in \text{Im}(B^{2n})$.
+
+The obstruction to $M\text{Spin}$-brane is cohomology. But we can take $\pi_1(L)=0, w_2(L)=0, H_3(L, \mathbb{Z}/2)=0$. Additionally, we have 
+\[\hat{X}=\text{subcritical handles} \cup T^*S^n \implies \mathcal{W}(\hat{X}, R) \cong \mathcal{W}(T^*S^n, R).\]
+
+Similarly, $\hat{L}\cong \hat{C}$ in $\mathcal{W}(\hat{W}, R)$. We conclude that
+\[\text{HW}(L, L, R)\to H_n(\hat{X}, R) =\Omega_n^{\text{spin}}(\hat{X})\]
+and we are done.
+\end{proof}
